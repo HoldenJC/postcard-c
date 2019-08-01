@@ -13,7 +13,7 @@ namespace FriendLetter.Controllers
     public string Goodbye() { return "Goodbye friend."; }
 
     [Route("/")]
-    public ActionResult Letter() { 
+    public ActionResult Letter() {
         LetterVariable myLetterVariable = new LetterVariable();
         myLetterVariable.Recipient = "Lina";
         myLetterVariable.Sender = "Jasmine";
@@ -22,7 +22,7 @@ namespace FriendLetter.Controllers
 
     [Route("/form")]
     public ActionResult Form() { return View(); }
-    
+
     [Route("/postcard")]
     public ActionResult Postcard(string recipient, string sender)
     {
@@ -32,6 +32,11 @@ namespace FriendLetter.Controllers
         return View(myLetterVariable);
     }
 
-  
+    [Route("/favorite_photos")]
+    public ActionResult FavoritePhotos()
+    {
+      return View();
+    }
+
   }
 }
