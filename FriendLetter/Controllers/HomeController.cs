@@ -13,6 +13,11 @@ namespace FriendLetter.Controllers
     public string Goodbye() { return "Goodbye friend."; }
 
     [Route("/")]
+    public ActionResult Index() {
+        return View();
+    }
+
+    [Route("/letter")]
     public ActionResult Letter() {
         LetterVariable myLetterVariable = new LetterVariable();
         myLetterVariable.Recipient = "Lina";
